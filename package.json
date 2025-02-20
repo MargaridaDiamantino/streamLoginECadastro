@@ -17,9 +17,13 @@
   "homepage": "https://github.com/MargaridaDiamantino/streamLoginECadastro#readme",
   "description": "",
   "devDependencies": {
+    "prisma": "^6.4.0",
     "typescript": "^5.7.3"
   },
   "dependencies": {
-    "@types/node": "^22.13.4"
+    "@prisma/client": "^6.4.0",
+    "@types/node": "^22.13.4",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.1"
   }
 }
