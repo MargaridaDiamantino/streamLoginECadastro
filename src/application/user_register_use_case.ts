@@ -14,7 +14,7 @@ export class UserRegisterUseCase {
 
         const senha = await hash.execute(User.senha)
 
-        this.UserRepositoies.userRegister({ nome: User.nome, email: User.email, senha })
+     return this.UserRepositoies.userRegister({ nome: User.nome, email: User.email, senha })
 
 
     }

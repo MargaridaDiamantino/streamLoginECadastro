@@ -16,8 +16,10 @@ export class IUserRepositories implements UserRepositories {
 
     }
  async   userFindEmail(email: string): Promise<IUSer|null> {
-     return await prisma.usuarios.findUnique({where:{
+     return await prisma.usuarios.findUnique({
+        where:{
         email
-     }})
+     }
+    })
     }
 }

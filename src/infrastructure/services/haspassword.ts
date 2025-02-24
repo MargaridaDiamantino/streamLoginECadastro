@@ -7,5 +7,13 @@ import bcrypt from "bcrypt";
 
     }
  }
+
+ class ComparePassWord{
+   constructor(){}
+   async execute(senha: string,hash: string):Promise<boolean>{
+      return await bcrypt.compare(senha,hash)
+   }
+ }
+ export const  ComparePassword= new  ComparePassWord
  export const hash= new HashPassWord
  
