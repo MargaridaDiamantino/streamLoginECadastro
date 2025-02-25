@@ -9,12 +9,12 @@ export interface IUSer {
 
 }
 
-export class User implements IUSer{
+export class Users implements IUSer{
     @IsString()
     @IsNotEmpty({ message: "O nome é obrigatório" })
     nome: string;
 
-    @IsEmail({}, { message: "E-mail inválido" })
+    @IsEmail({},{message:"Email invalido"})
     @IsNotEmpty()
     email: string;
 
