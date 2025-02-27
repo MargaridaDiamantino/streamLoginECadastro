@@ -5,12 +5,12 @@ export interface IUSer{
 
 }
 
-export class UserRegister{
+ export class UserRegister{
     private id:String
     private User:IUSer
-    constructor(User:IUSer,id:string)
+    constructor(user:IUSer,id:string)
     {    this.id= id?? ""
-        this.User={...User}
+        this.User={...user}
     }
 
  public  get nome():string {

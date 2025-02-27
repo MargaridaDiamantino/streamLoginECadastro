@@ -7,7 +7,7 @@ const options:swaggerJsDoc.Options={
     definition:{
         openapi: "3.0.0",
         info:{
-            title: "API Documentation",
+            title: "API Stream",
             version: "1.0.0",
             description:"Documentacao da API"
         },

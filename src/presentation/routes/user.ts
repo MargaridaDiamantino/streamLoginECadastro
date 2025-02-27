@@ -1,5 +1,5 @@
 import { Router, Request, Response } from "express";
-import { UserRegisterControllers } from "../controllers";
+import { UserLoginControllers, UserRegisterControllers } from "../controllers";
 
 
 
@@ -31,6 +31,32 @@ const router = Router()
 
 router.post("/users", (request, response) => {
   UserRegisterControllers.execute(request, response)
+})
+
+
+/**
+ * @swagger
+ * /login:
+ *   post:
+ *     summary: login
+ *     description: loga um usuário 
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               email:
+ *                 type: string
+ *               senha:
+ *                 type: string
+ *     responses:
+ *       200:
+ *         description: logado com sucesso.
+ */
+router.post("login", (request, response)=>{
+  UserLoginControllers.execute(request, response)
 })
 
 export default router
