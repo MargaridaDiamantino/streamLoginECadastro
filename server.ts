@@ -1,5 +1,5 @@
-import app from "./app";
-import { setupSwagger } from "./infrastructure/config/swagger";
+import app from "./src/app";
+import { setupSwagger } from "./src/infrastructure/config/swagger";
 
 
 setupSwagger(app)
