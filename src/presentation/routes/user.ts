@@ -1,5 +1,6 @@
 import { Router, Request, Response } from "express";
 import { UserLoginControllers, UserRegisterControllers } from "../controllers";
+import { AuthMiddleware } from "../../infrastructure/Middleware/authMiddleware";
 
 
 
@@ -29,7 +30,7 @@ const router = Router()
  *         description: Usuário criado com sucesso.
  */
 
-router.post("/users", (request, response) => {
+router.post("/users",(request, response) => {
   UserRegisterControllers.execute(request, response)
 })
 
@@ -55,7 +56,7 @@ router.post("/users", (request, response) => {
  *       200:
  *         description: logado com sucesso.
  */
-router.post("login", (request, response)=>{
+router.post("login",(request, response)=>{
   UserLoginControllers.execute(request, response)
 })
 
